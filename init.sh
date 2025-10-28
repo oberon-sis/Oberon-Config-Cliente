@@ -115,6 +115,15 @@ clone_repository_java() {
 
 configure_repository_java(){
     print_header "COMPILAÇÃO DO PROJETO JAVA (MAVEN)"
+    JAVA_JAR_PATH="../../target/looca-api-1.0.0-jar-with-dependencies.jar"
+
+    if [ -f "$JAVA_JAR_PATH" ]; then
+        echo "AVISO: O arquivo JAR final já existe. Pulando a compilação Maven."
+        cd ../..
+        print_separator
+        return 0
+    fi
+    
     if [ -d "$JAVA_DIR" ] && [ -d "$JAVA_DIR/looca-api" ]; then
         cd "$JAVA_DIR/looca-api"
         echo "Executando 'mvn clean install' em $(pwd)..."
