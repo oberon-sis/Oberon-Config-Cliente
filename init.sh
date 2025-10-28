@@ -139,7 +139,8 @@ configure_repository_java(){
 
 runJavaEmSegundoPlano(){
     print_header "EXECUÇÃO DO PROJETO JAVA EM SEGUNDO PLANO"
-    
+    cd ~
+    cd cliente
     JAVA_JAR_PATH="$JAVA_DIR/looca-api/target/looca-api-1.0.0-jar-with-dependencies.jar"
     LOG_FILE="$JAVA_DIR/oberon_java.log"
 
@@ -158,6 +159,8 @@ runPythonEmSegundoPlano(){
     PYTHON_SCRIPT_PATH="$PYTHON_DIR/main.py"
     PYTHON_VENV_PYTHON="$PYTHON_DIR/venv/bin/python"
     LOG_FILE="$PYTHON_DIR/oberon_python.log"
+    cd ~
+    cd cliente
 
     if [ -f "$PYTHON_SCRIPT_PATH" ] && [ -f "$PYTHON_VENV_PYTHON" ]; then
         nohup "$PYTHON_VENV_PYTHON" "$PYTHON_SCRIPT_PATH" > "$LOG_FILE" 2>&1 &
