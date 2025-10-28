@@ -212,6 +212,10 @@ configure_repository_java
 runJavaEmSegundoPlano
 runPythonEmSegundoPlano
 
+cd ~
+
+
+
 print_header "FINALIZAÇÃO E INSPEÇÃO DE LOGS DE ERRO"
 echo "O script foi concluído. As aplicações estão rodando em segundo plano e logs foram criados."
 echo "======================================================================================="
