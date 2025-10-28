@@ -194,8 +194,12 @@ print_separator
 cd ~ 
 
 print_header "ATUALIZAÇÃO DE PACOTES DO SISTEMA"
-sudo apt update -qq -y 
-sudo apt upgrade -qq -y
+# sudo apt update -qq -y 
+# sudo apt upgrade -qq -y
+sudo apt-get update
+sudo apt update
+sudo apt-get upgrade
+sudo apt upgrade
 print_separator
 
 create_target_directory 
