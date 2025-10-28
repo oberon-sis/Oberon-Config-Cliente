@@ -214,7 +214,7 @@ runPythonEmSegundoPlano
 
 cd ~
 
-
+cd cliente
 
 print_header "FINALIZAÇÃO E INSPEÇÃO DE LOGS DE ERRO"
 echo "O script foi concluído. As aplicações estão rodando em segundo plano e logs foram criados."
@@ -237,4 +237,8 @@ print_separator
 
 echo "Terminal liberado. Use 'ps aux | grep -i java' ou 'ps aux | grep -i python' para verificar os processos."
 echo "Use 'tail -f [caminho do log]' para monitorar em tempo real após ligar o banco de dados."
+echo "Exemplo Python"
+echo "    tail -f $PYTHON_DIR/oberon_python.log"
+echo "Exemplo Java"
+echo "    tail -f $JAVA_DIR/oberon_java.log"
 print_separator
