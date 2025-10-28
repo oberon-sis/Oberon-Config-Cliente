@@ -115,7 +115,8 @@ clone_repository_java() {
 
 configure_repository_java(){
     print_header "COMPILAÇÃO DO PROJETO JAVA (MAVEN)"
-    JAVA_JAR_PATH="../../target/looca-api-1.0.0-jar-with-dependencies.jar"
+    # JAVA_JAR_PATH="../../target/looca-api-1.0.0-jar-with-dependencies.jar"
+    JAVA_JAR_PATH="Oberon-Coleta-Java/looca-api/target/looca-api-1.0.0-jar-with-dependencies.jar"
 
     if [ -f "$JAVA_JAR_PATH" ]; then
         echo "AVISO: O arquivo JAR final já existe. Pulando a compilação Maven."
