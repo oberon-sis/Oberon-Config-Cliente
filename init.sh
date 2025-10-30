@@ -85,9 +85,9 @@ configure_env_files() {
     ENV_FILE="$PYTHON_DIR/.env"
     if [ ! -f "$ENV_FILE" ]; then
         cat << EOF > "$ENV_FILE"
-USER_DB=ClienteOberon
+USER_DB=oberon_cliente
 PASSWORD_DB=ClienteOberon123
-HOST_DB=221.72.209.164
+HOST_DB=44.207.133.113
 DATABASE_DB=bdOberon
 EOF
         echo "Arquivo $ENV_FILE criado com conteúdo padrão."
